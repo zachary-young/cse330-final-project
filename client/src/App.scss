@@ -1,0 +1,189 @@
+//Colors
+
+$white: #fff;
+$red: #c00505;
+$blue: #1668ff;
+$off-white: #c0c0c0;
+$light-grey: #b9b9b9;
+$grey: #868686;
+$dark-grey: #616161;
+
+//Fonts
+
+$large: 32pt;
+$small: 12pt;
+
+//Margins
+$margin-large: 100pt;
+$margin-small: 10pt;
+
+//Random mixins
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+//General tags
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: $large;
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+    outline: none
+}
+
+nav {
+    @include flex-between;
+    background: $red;
+    color: $white;
+    height: 100px;
+    padding: 0 100px;
+}
+
+//Hover
+
+.click:hover {
+    color: $blue;
+}
+
+//Form input
+
+.user-form {
+    position: relative;
+}
+
+.user-form * {
+    margin-left: $margin-small;
+}
+
+@mixin input {
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 15px;
+    font-size: $small;
+}
+
+.text-input {
+    @include input;
+    border: none;
+}
+
+#search-input {
+    @include input;
+    width: 300px;
+    border: 1px solid $light-grey;
+}
+
+//Buttons
+
+@mixin button {
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: $small;
+    padding: 0 15px;
+}
+
+.light-button {
+    @include button;
+    background: $white;
+}
+
+.dark-button {
+    @include button;
+    background: $dark-grey;
+    margin-left: $margin-small;
+    color: $white;
+}
+
+#delete-button {
+    display: block;
+    margin-top: $margin-small;
+    display: block;
+}
+
+.light-button:hover {
+    background: $off-white;
+}
+
+.dark-button:hover {
+    background: $grey;
+}
+
+//View
+
+.view {
+    margin: 0 100px;
+}
+
+#geotag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#index {
+    margin-left: $margin-small;
+}
+
+.header-container {
+    @include flex-between
+}
+
+.restaurant-container, .item-container, .review-container {
+    padding: 20px;
+    border-radius: 10px;
+    background: $white;
+    margin: $margin-small 0;
+}
+
+.review-container {
+    overflow: hidden;
+}
+
+#description-input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid $light-grey;
+    border-radius: 15px;
+    padding: 15px 15px;
+    font-size: $small;
+    resize: none;
+    margin-bottom: $margin-small;
+}
+
+#rating-input {
+    height: 30px;
+    font-size: $small;
+}
+
+//Error
+
+#login-error {
+    position: absolute;
+    right: 0;
+    top: 35px;
+    font-size: $small;
+    font-weight: 700;
+    font-style: italic;
+}
+
+#review-error, .delete-error {
+    margin-left: $margin-small;
+    color: $red;
+}
+
+.delete-error {
+    display: block;
+    margin-top: $margin-small;
+}
+
+.like-count {
+    display: block;
+    font-style: italic;
+    margin-bottom: $margin-small;
+}

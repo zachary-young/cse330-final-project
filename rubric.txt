@@ -1,0 +1,25 @@
+Gulp: a food-first approach to crowdsourced restaurant reviews.
+
+Rubric turned in on time (5 points)
+
+Languages/Frameworks used (20 points)
+10 - Learned/Used React.js frontend
+10 - Learned/Used Express (Node.js) backend
+0 - MySQL Database
+
+Functionality (50 points)
+10 - Users can register, login, and logout
+15 - Users can search for a restaurant and retrieve a ranked list of popular menu items at that restaurant
+15 - Users can leave photo-attached reviews on food items at restaurants with 1 to 5 stars.
+10 - Database contains Users, Restaurants, and Food Items with the necessary columns and column types to maintain the above functionality
+
+Best Practices (5 points)
+3 - Code is readable and well formatted
+2 - All pages pass the html validator
+
+Creative Portion (20 points)
+
+Approved by Bradford Orr
+
+
+
